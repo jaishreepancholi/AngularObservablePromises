@@ -1,0 +1,28 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align:center">
+    <h1>Welcome to {{ title }}!</h1>
+
+    <!-- <h2>Country Name Search</h2>
+    <input
+        type="text"
+        #term
+        (keyup)="search(term.value)">
+    <div*ngIf="results.length>0">
+      <li *ngFor="let result of results">
+          {{result.name}}
+      </li>
+    </div> -->
+
+    <div>
+        <h2>Country Name Search</h2>
+        <!-- Reactive form used here -->
+
+        <input [formControl]="term">
+    </div>
+    <div *ngIf="results.length>0">
+        <li *ngFor="let result of results">{{result.name}}</li>
+    </div>
+
+</div>
+
+<router-outlet></router-outlet>
